@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <style>
+        body {
+            background-image: url(bg1.jpg);
+            background-size: cover; /* Растягиваем изображение, чтобы оно покрывало всю область фона */
+            background-position: center; /* Центрируем изображение по горизонтали и вертикали */
+            background-repeat: no-repeat; /* Запрещаем повторение фона */
+
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #2980b9;
+        }
+    
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+    
+        /* Общие стили для всех устройств */
+        .home {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 30px 5%;
+        }
+    
+        .content {
+            max-width: 500px;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-weight: bold;
+            text-shadow: 5px 5px 10px rgb(0, 0, 0);
+        }
+    
+        .content h2 {
+            font-size: 3em;
+        }
+    
+        .content p {
+            padding: 10px 0 40px 0;
+            font-size: 25px;
+        }
+    
+        .grup-tumbol a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 40px;
+            background: orange;
+            border-radius: 10px;
+            border: 2px solid orange;
+            font-weight: 500;
+            transition: .3s;
+            margin-right: 10px;
+        }
+    
+        .grup-tumbol a:hover {
+            color: orange;
+            background: transparent;
+        }
+    
+        /* Медиа-запрос для планшетов и более крупных устройств */
+        @media only screen and (min-width: 769px) and (max-width: 1024px) {
+            #video-background {
+                object-fit: contain; /* Изменяем object-fit для более уместного отображения на планшетах */
+            }
+    
+            .button {
+                padding: 15px 5%;
+                font-size: 2vw;
+                margin: 10vh 0 20vh 0;
+            }
+        }
+    
+        /* Медиа-запрос для мобильных устройств */
+        @media only screen and (max-width: 768px) {
+            #video-background {
+                object-fit: contain; /* Изменяем object-fit для более уместного отображения на мобильных устройствах */
+            }
+    
+            .button {
+                padding: 10px 5%;
+                font-size: 4vw;
+                margin: 10vh 0 20vh 0;
+            }
+    
+            .home {
+                padding: 20px 5%;
+            }
+    
+            .content {
+                max-width: 100%;
+                padding: 0 5%;
+            }
+    
+            .content h2 {
+                font-size: 4vw;
+            }
+    
+            .content p {
+                font-size: 3vw;
+                padding: 2vh 0 4vh 0;
+            }
+    
+            .grup-tumbol a {
+                padding: 2vh 5%;
+            }
+    
+            .grup-tumbol a:hover:nth-child(2) {
+                margin-left: 0;
+            }
+    
+            .grup-tumbol a:hover:nth-child(3) {
+                padding: 2vh 5%;
+            }
+        }
+    </style>
+    
+    
+    
+    
+</head>
+<body>
+    <section class="home">
+        <div class="content">
+            <h2>Привет это страница про <span>Porsche</span></h2>
+            <p>На сайте вы можете получить информацию про развитие машин марки porsche. также на сайте присутствует информация про основателя данной марки автомобиля </p>
+
+            <div class="grup-tumbol">
+                <a href="index2.html">Перейти на сайт</a>
+            </div>
+        </div>
+    </section>
+</section><video id="video-background" loop muted autoplay>
+    <source src="bg1.jpg" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+</body>
+</html>
